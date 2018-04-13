@@ -84,18 +84,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>描述进程的资源占用情况，<br>了解linux内核在进程创建过程中分配资源；<br>了解linux内核在进程退出过程中回收资源；</p>
-<h1 id="资源分类"><a href="#资源分类" class="headerlink" title="资源分类"></a>资源分类</h1><ol>
-<li>页表</li>
-<li>地址空间</li>
-<li>物理内存</li>
-<li>文件句柄<ul>
-<li>文件</li>
-<li>socket</li>
+        <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>描述进程用户态/内核态的资源占用情况;<br>了解linux内核在进程创建过程中分配资源;<br>了解linux内核在进程退出过程中回收资源;</p>
+<h1 id="进程资源"><a href="#进程资源" class="headerlink" title="进程资源"></a>进程资源</h1><p>进程相关资源都放在 struct task_struct 结构中;</p>
+<ol>
+<li>进程控制块  struct task_struct;</li>
+<li>进程内存   struct mm_struct 红黑树组织;<ul>
+<li>进程页表   pgd_t pmd_t pte_t;</li>
+<li>地址空间   struct vm_area_struct</li>
+<li>物理内存   struct page</li>
 </ul>
 </li>
+<li>文件句柄   struct files_struct, struct fdtable<ul>
+<li>文件   struct file, struct inode</li>
+<li>socket  struct file, struct socket</li>
+</ul>
+</li>
+<li>信号  struct signal_struct</li>
 <li>信号量</li>
-<li>共享内存</li>
+<li>IO上下文信息 struct io_context</li>
+<li>线程信息 struct thread_struct</li>
 </ol>
 
       

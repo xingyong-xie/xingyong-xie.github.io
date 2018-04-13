@@ -7,18 +7,18 @@
   
   <title>linux进程资源 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="目的描述进程的资源占用情况，了解linux内核在进程创建过程中分配资源；了解linux内核在进程退出过程中回收资源； 资源分类 页表 地址空间 物理内存 文件句柄 文件 socket   信号量 共享内存">
+  <meta name="description" content="目的描述进程用户态/内核态的资源占用情况;了解linux内核在进程创建过程中分配资源;了解linux内核在进程退出过程中回收资源; 进程资源进程相关资源都放在 struct task_struct 结构中;  进程控制块  struct task_struct; 进程内存   struct mm_struct 红黑树组织; 进程页表   pgd_t pmd_t pte_t; 地址空间   stru">
 <meta name="keywords" content="linux 进程资源">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux进程资源">
 <meta property="og:url" content="http://yoursite.com/2018/04/13/进程资源/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="目的描述进程的资源占用情况，了解linux内核在进程创建过程中分配资源；了解linux内核在进程退出过程中回收资源； 资源分类 页表 地址空间 物理内存 文件句柄 文件 socket   信号量 共享内存">
+<meta property="og:description" content="目的描述进程用户态/内核态的资源占用情况;了解linux内核在进程创建过程中分配资源;了解linux内核在进程退出过程中回收资源; 进程资源进程相关资源都放在 struct task_struct 结构中;  进程控制块  struct task_struct; 进程内存   struct mm_struct 红黑树组织; 进程页表   pgd_t pmd_t pte_t; 地址空间   stru">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-13T09:34:40.573Z">
+<meta property="og:updated_time" content="2018-04-13T10:25:11.393Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux进程资源">
-<meta name="twitter:description" content="目的描述进程的资源占用情况，了解linux内核在进程创建过程中分配资源；了解linux内核在进程退出过程中回收资源； 资源分类 页表 地址空间 物理内存 文件句柄 文件 socket   信号量 共享内存">
+<meta name="twitter:description" content="目的描述进程用户态/内核态的资源占用情况;了解linux内核在进程创建过程中分配资源;了解linux内核在进程退出过程中回收资源; 进程资源进程相关资源都放在 struct task_struct 结构中;  进程控制块  struct task_struct; 进程内存   struct mm_struct 红黑树组织; 进程页表   pgd_t pmd_t pte_t; 地址空间   stru">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -87,18 +87,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>描述进程的资源占用情况，<br>了解linux内核在进程创建过程中分配资源；<br>了解linux内核在进程退出过程中回收资源；</p>
-<h1 id="资源分类"><a href="#资源分类" class="headerlink" title="资源分类"></a>资源分类</h1><ol>
-<li>页表</li>
-<li>地址空间</li>
-<li>物理内存</li>
-<li>文件句柄<ul>
-<li>文件</li>
-<li>socket</li>
+        <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>描述进程用户态/内核态的资源占用情况;<br>了解linux内核在进程创建过程中分配资源;<br>了解linux内核在进程退出过程中回收资源;</p>
+<h1 id="进程资源"><a href="#进程资源" class="headerlink" title="进程资源"></a>进程资源</h1><p>进程相关资源都放在 struct task_struct 结构中;</p>
+<ol>
+<li>进程控制块  struct task_struct;</li>
+<li>进程内存   struct mm_struct 红黑树组织;<ul>
+<li>进程页表   pgd_t pmd_t pte_t;</li>
+<li>地址空间   struct vm_area_struct</li>
+<li>物理内存   struct page</li>
 </ul>
 </li>
+<li>文件句柄   struct files_struct, struct fdtable<ul>
+<li>文件   struct file, struct inode</li>
+<li>socket  struct file, struct socket</li>
+</ul>
+</li>
+<li>信号  struct signal_struct</li>
 <li>信号量</li>
-<li>共享内存</li>
+<li>IO上下文信息 struct io_context</li>
+<li>线程信息 struct thread_struct</li>
 </ol>
 
       
