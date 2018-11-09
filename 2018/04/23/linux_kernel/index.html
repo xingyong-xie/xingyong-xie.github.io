@@ -5,23 +5,23 @@
   
 
   
-  <title>linux内核 | 我思故我在</title>
+  <title>linux内核 | Welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Linux kernel 架构图">
+  <meta name="description" content="Linux kernel 架构图    功能分层 系统 进程 内存 存储 网络 人机     用户空间接口 系统接口 进程 内存访问 文件/目录 套接字 人机字符设备   虚拟抽象层 设备模型 线程 虚拟地址 虚拟文件系统 协议族 安全   桥接层 N/A 同步 内存映射 页面缓存/Swap 网络存储 N/A   功能层 系统运行 调度器 逻辑内存 逻辑文件系统 协议 人机子系统   设备控制">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux内核">
-<meta property="og:url" content="http://yoursite.com/2018/04/23/linux内核/index.html">
-<meta property="og:site_name" content="我思故我在">
-<meta property="og:description" content="Linux kernel 架构图">
+<meta property="og:url" content="http://yoursite.com/2018/04/23/linux_kernel/index.html">
+<meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="Linux kernel 架构图    功能分层 系统 进程 内存 存储 网络 人机     用户空间接口 系统接口 进程 内存访问 文件/目录 套接字 人机字符设备   虚拟抽象层 设备模型 线程 虚拟地址 虚拟文件系统 协议族 安全   桥接层 N/A 同步 内存映射 页面缓存/Swap 网络存储 N/A   功能层 系统运行 调度器 逻辑内存 逻辑文件系统 协议 人机子系统   设备控制">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/images/Linux_kernel_map.png">
-<meta property="og:updated_time" content="2018-04-23T02:34:08.000Z">
+<meta property="og:updated_time" content="2018-05-07T13:52:37.120Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="linux内核">
-<meta name="twitter:description" content="Linux kernel 架构图">
+<meta name="twitter:description" content="Linux kernel 架构图    功能分层 系统 进程 内存 存储 网络 人机     用户空间接口 系统接口 进程 内存访问 文件/目录 套接字 人机字符设备   虚拟抽象层 设备模型 线程 虚拟地址 虚拟文件系统 协议族 安全   桥接层 N/A 同步 内存映射 页面缓存/Swap 网络存储 N/A   功能层 系统运行 调度器 逻辑内存 逻辑文件系统 协议 人机子系统   设备控制">
 <meta name="twitter:image" content="http://yoursite.com/images/Linux_kernel_map.png">
   
-    <link rel="alternate" href="/atom.xml" title="我思故我在" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Welcome" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -40,7 +40,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">我思故我在</a>
+        <a href="/" id="logo">Welcome</a>
       </h1>
       
     </div>
@@ -66,9 +66,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-linux内核" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-linux_kernel" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/04/23/linux内核/" class="article-date">
+    <a href="/2018/04/23/linux_kernel/" class="article-date">
   <time datetime="2018-04-23T02:29:09.000Z" itemprop="datePublished">2018-04-23</time>
 </a>
     
@@ -89,11 +89,89 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Linux-kernel-架构图"><a href="#Linux-kernel-架构图" class="headerlink" title="Linux kernel 架构图"></a>Linux kernel 架构图</h1><p><img src="/images/Linux_kernel_map.png" alt="Linux kernel 架构"></p>
+<table>
+<thead>
+<tr>
+<th>功能分层</th>
+<th>系统</th>
+<th>进程</th>
+<th>内存</th>
+<th>存储</th>
+<th>网络</th>
+<th>人机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户空间接口</td>
+<td>系统接口</td>
+<td>进程</td>
+<td>内存访问</td>
+<td>文件/目录</td>
+<td>套接字</td>
+<td>人机字符设备</td>
+</tr>
+<tr>
+<td>虚拟抽象层</td>
+<td>设备模型</td>
+<td>线程</td>
+<td>虚拟地址</td>
+<td>虚拟文件系统</td>
+<td>协议族</td>
+<td>安全</td>
+</tr>
+<tr>
+<td>桥接层</td>
+<td>N/A</td>
+<td>同步</td>
+<td>内存映射</td>
+<td>页面缓存/Swap</td>
+<td>网络存储</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>功能层</td>
+<td>系统运行</td>
+<td>调度器</td>
+<td>逻辑内存</td>
+<td>逻辑文件系统</td>
+<td>协议</td>
+<td>人机子系统</td>
+</tr>
+<tr>
+<td>设备控制层</td>
+<td>通用硬件访问</td>
+<td>中断上下文</td>
+<td>块设备</td>
+<td>存储</td>
+<td>虚拟网络设备</td>
+<td>抽象设备/分类驱动</td>
+</tr>
+<tr>
+<td>硬件驱动层</td>
+<td>设备访问/总线驱动</td>
+<td>特定CPU操作</td>
+<td>磁盘控制器驱动</td>
+<td>网络设备驱动</td>
+<td>网络</td>
+<td>人机外设设备驱动</td>
+</tr>
+<tr>
+<td>硬件层</td>
+<td>IO</td>
+<td>CPU</td>
+<td>物理内存</td>
+<td>存储</td>
+<td>网卡</td>
+<td>用户外设</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/23/linux内核/" data-id="cjgeg6v0b0001vxev2o4kiaue" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/23/linux_kernel/" data-id="cjo9ulh7f0001wfev9l6inxbg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -103,9 +181,9 @@
 <nav id="article-nav">
   
   
-    <a href="/2018/04/13/进程资源/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/03/25/Descartes/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">linux进程资源</div>
+      <div class="article-nav-title">Descartes 方法论</div>
     </a>
   
 </nav>
@@ -124,7 +202,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Descartes-方法论/">Descartes 方法论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-进程资源/">linux 进程资源</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Descartes-方法论/">Descartes 方法论</a></li></ul>
     </div>
   </div>
 
@@ -134,7 +212,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Descartes-方法论/" style="font-size: 10px;">Descartes 方法论</a> <a href="/tags/linux-进程资源/" style="font-size: 10px;">linux 进程资源</a>
+      <a href="/tags/Descartes-方法论/" style="font-size: 10px;">Descartes 方法论</a>
     </div>
   </div>
 
@@ -156,11 +234,7 @@
       <ul>
         
           <li>
-            <a href="/2018/04/23/linux内核/">linux内核</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/13/进程资源/">linux进程资源</a>
+            <a href="/2018/04/23/linux_kernel/">linux内核</a>
           </li>
         
           <li>
@@ -179,7 +253,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
+      &copy; 2018 xingyong xie<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>

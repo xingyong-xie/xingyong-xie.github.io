@@ -5,17 +5,17 @@
   
 
   
-  <title>我思故我在</title>
+  <title>Welcome</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="我思故我在">
+<meta property="og:title" content="Welcome">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="我思故我在">
+<meta property="og:site_name" content="Welcome">
 <meta property="og:locale" content="default">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我思故我在">
+<meta name="twitter:title" content="Welcome">
   
-    <link rel="alternate" href="/atom.xml" title="我思故我在" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Welcome" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -34,7 +34,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">我思故我在</a>
+        <a href="/" id="logo">Welcome</a>
       </h1>
       
     </div>
@@ -62,9 +62,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-linux内核" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-linux_kernel" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/04/23/linux内核/" class="article-date">
+    <a href="/2018/04/23/linux_kernel/" class="article-date">
   <time datetime="2018-04-23T02:29:09.000Z" itemprop="datePublished">2018-04-23</time>
 </a>
     
@@ -76,7 +76,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/23/linux内核/">linux内核</a>
+      <a class="article-title" href="/2018/04/23/linux_kernel/">linux内核</a>
     </h1>
   
 
@@ -85,71 +85,91 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Linux-kernel-架构图"><a href="#Linux-kernel-架构图" class="headerlink" title="Linux kernel 架构图"></a>Linux kernel 架构图</h1><p><img src="/images/Linux_kernel_map.png" alt="Linux kernel 架构"></p>
+<table>
+<thead>
+<tr>
+<th>功能分层</th>
+<th>系统</th>
+<th>进程</th>
+<th>内存</th>
+<th>存储</th>
+<th>网络</th>
+<th>人机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用户空间接口</td>
+<td>系统接口</td>
+<td>进程</td>
+<td>内存访问</td>
+<td>文件/目录</td>
+<td>套接字</td>
+<td>人机字符设备</td>
+</tr>
+<tr>
+<td>虚拟抽象层</td>
+<td>设备模型</td>
+<td>线程</td>
+<td>虚拟地址</td>
+<td>虚拟文件系统</td>
+<td>协议族</td>
+<td>安全</td>
+</tr>
+<tr>
+<td>桥接层</td>
+<td>N/A</td>
+<td>同步</td>
+<td>内存映射</td>
+<td>页面缓存/Swap</td>
+<td>网络存储</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>功能层</td>
+<td>系统运行</td>
+<td>调度器</td>
+<td>逻辑内存</td>
+<td>逻辑文件系统</td>
+<td>协议</td>
+<td>人机子系统</td>
+</tr>
+<tr>
+<td>设备控制层</td>
+<td>通用硬件访问</td>
+<td>中断上下文</td>
+<td>块设备</td>
+<td>存储</td>
+<td>虚拟网络设备</td>
+<td>抽象设备/分类驱动</td>
+</tr>
+<tr>
+<td>硬件驱动层</td>
+<td>设备访问/总线驱动</td>
+<td>特定CPU操作</td>
+<td>磁盘控制器驱动</td>
+<td>网络设备驱动</td>
+<td>网络</td>
+<td>人机外设设备驱动</td>
+</tr>
+<tr>
+<td>硬件层</td>
+<td>IO</td>
+<td>CPU</td>
+<td>物理内存</td>
+<td>存储</td>
+<td>网卡</td>
+<td>用户外设</td>
+</tr>
+</tbody>
+</table>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/23/linux内核/" data-id="cjgeg6v0b0001vxev2o4kiaue" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/04/23/linux_kernel/" data-id="cjo9ulh7f0001wfev9l6inxbg" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-进程资源" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/13/进程资源/" class="article-date">
-  <time datetime="2018-04-13T09:22:04.000Z" itemprop="datePublished">2018-04-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/13/进程资源/">linux进程资源</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h1><p>描述进程用户态/内核态的资源占用情况;<br>了解linux内核在进程创建过程中分配资源;<br>了解linux内核在进程退出过程中回收资源;</p>
-<h1 id="进程资源"><a href="#进程资源" class="headerlink" title="进程资源"></a>进程资源</h1><p>进程相关资源都放在 struct task_struct 结构中;</p>
-<ol>
-<li>进程控制块  struct task_struct;</li>
-<li>进程内存   struct mm_struct 红黑树组织;<ul>
-<li>进程页表   pgd_t pmd_t pte_t;</li>
-<li>地址空间   struct vm_area_struct</li>
-<li>物理内存   struct page</li>
-</ul>
-</li>
-<li>文件句柄   struct files_struct, struct fdtable<ul>
-<li>文件   struct file, struct inode</li>
-<li>socket  struct file, struct socket</li>
-</ul>
-</li>
-<li>信号  struct signal_struct</li>
-<li>信号量</li>
-<li>IO上下文信息 struct io_context</li>
-<li>线程信息 struct thread_struct</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/13/进程资源/" data-id="cjgeg6v0f0003vxevkk48g28x" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux-进程资源/">linux 进程资源</a></li></ul>
-
     </footer>
   </div>
   
@@ -181,8 +201,8 @@
       
         <p><img src="/images/Descartes.jpeg" alt="Rene Descartes"></p>
 <ol>
-<li>永远不接受任何我自己不清楚的真理。<br>就是说要尽量避免鲁莽和偏见，只能是根据自己的判断非常清楚和确定，没有任何值得怀疑的地方的真理。就是说只要没有经过自己切身体会的问题，不管有什么权威的结论，都可以怀疑。这就是著名的“怀疑一切”理论。</li>
-<li>可以将要研究的复杂问题，尽量分解为多个比较简单的小问题，一个一个地分开解决。</li>
+<li>永远不接受任何我自己不清楚的真理。</li>
+<li>将要研究的复杂问题，尽量分解为多个比较简单的小问题，一个一个地分开解决。</li>
 <li>将这些小问题从简单到复杂排列，先从容易解决的问题着手。</li>
 <li>将所有问题解决后，再综合起来检验，看是否完全，是否将问题彻底解决了。</li>
 </ol>
@@ -190,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/25/Descartes/" data-id="cjgeg6v030000vxev7ujc6pse" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/03/25/Descartes/" data-id="cjo9ulh780000wfevgd96zblx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Descartes-方法论/">Descartes 方法论</a></li></ul>
@@ -215,7 +235,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Descartes-方法论/">Descartes 方法论</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux-进程资源/">linux 进程资源</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Descartes-方法论/">Descartes 方法论</a></li></ul>
     </div>
   </div>
 
@@ -225,7 +245,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Descartes-方法论/" style="font-size: 10px;">Descartes 方法论</a> <a href="/tags/linux-进程资源/" style="font-size: 10px;">linux 进程资源</a>
+      <a href="/tags/Descartes-方法论/" style="font-size: 10px;">Descartes 方法论</a>
     </div>
   </div>
 
@@ -247,11 +267,7 @@
       <ul>
         
           <li>
-            <a href="/2018/04/23/linux内核/">linux内核</a>
-          </li>
-        
-          <li>
-            <a href="/2018/04/13/进程资源/">linux进程资源</a>
+            <a href="/2018/04/23/linux_kernel/">linux内核</a>
           </li>
         
           <li>
@@ -270,7 +286,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2018 John Doe<br>
+      &copy; 2018 xingyong xie<br>
       Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
